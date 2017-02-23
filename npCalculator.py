@@ -1,6 +1,6 @@
 #Done By Raphael Baysa
 # Program to calculate N and P values and generate the board for a Take-away game
-# npcalculator Class takes 2 parameters, the set of rules and the game size(# of items in the list)
+# npcalculator Class takes 2 parameters, the set of rules and the game size(# of items in the game to be taken away)
 # 
 #
 
@@ -16,7 +16,6 @@ class npCalculator:
 	
 	def fill_np_board(self):
 		self.np_board = {0:'P'}
-		n_found = False
 
 		for num in range(1,self.target_num):
 			n_found = False
