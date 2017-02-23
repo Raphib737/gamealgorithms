@@ -32,11 +32,12 @@ class npCalculator:
 
 	def printBoard(self):
 		for keys in self.np_board:
-			print(keys,self.np_board[keys])
-
+			if(self.np_board[keys] == "P"):
+				print(keys,self.np_board[keys])
+		print(self.np_board)
 
 def main():
-	np = npCalculator([1,3,5,7],100)
+	np = npCalculator([1,3,6],100)
 	np.printBoard()
 
 main()
