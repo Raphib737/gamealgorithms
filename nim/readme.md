@@ -9,7 +9,7 @@ The winner is the last person who took the last set of stones from the last pile
 
 To Run the Program:
 ``` sh
-	>> python3 nim.py
+>> python3 nim.py
 ```
 
 ## Files
