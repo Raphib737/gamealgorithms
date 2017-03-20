@@ -14,7 +14,7 @@ To Run the Program:
 
 ## Files
 ### nim.py
-This program is the heart of the program. This contains printing out the menu and controlling the navigation of the application
+This program is the heart of the application. This contains printing out the menu and controlling the navigation of the application
 ### board.py
 This class is responsible for storing the state of the game as well as sanitize any invalid inputs the user has when playing the game. The data structure holding the state of the game is a dictionary/map.
 ### player.py
