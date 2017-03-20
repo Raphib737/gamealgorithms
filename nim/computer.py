@@ -23,7 +23,6 @@ class Computer(Player):
 			Returns:
 				None
 		"""
-		
 		num_set = []
 		for key in sorted(board.board.keys()):
 			num_set.append(board.board[key]);
@@ -34,14 +33,14 @@ class Computer(Player):
 		first_pass = True;
 		row = 0
 		while(nim_sum != 0):
-			num_set = num_set_copy[:];
+			num_set = num_set_copy[:];   #Reset table when we try a different # of sticks
 			if(first_pass):
 				num_sticks_to_remove = num_set[row]
 				first_pass = False
 			else:
 				num_sticks_to_remove = num_sticks_to_remove - 1
 			
-			if(num_sticks_to_remove < 1):
+			if(num_sticks_to_remove < 1):      #If we've exhausted a row and dont have an xor of 0, reset and move to the next row
 				row +=1;
 				num_sticks_to_remove = num_set[row];
 				first_pass = True
