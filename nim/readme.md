@@ -1,2 +1,2 @@
-#Game of Nim#
+# Game of Nim
 Nim is a two player game. In this case, that means you and the computer. When you start the game, a random number of piles consisting of a random number of stones is put together. Both players take turns. Each turn a player must remove one or more stones from a pile. The player that takes the last stone(s) from the only remaining pile wins. Easy, eh?
