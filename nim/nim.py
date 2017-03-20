@@ -4,7 +4,7 @@
 # 
 # Classes = [Player, Board, Computer(extends Player)]
 # Board is represented as a dictionary with key -> row_n *n being an integer*
-# # of rows of the board and sticks is generated randomly but can be changed in the Board class
+# Number of rows of the board and sticks is generated randomly but can be changed in the Board class
 
 # ****IF YOU ARE RUNNING ON A WINDOWS REPLACE ALL os.system('clear') WITH os.system('cls')****
 
@@ -18,11 +18,13 @@ import random
 ###### MAIN ########################
 def main():
 	os.system('clear');
-	mode = print_main();
+	print_main();
+	mode = get_input();
 	while(mode!="q"):
 		if(mode == 'a'):
 			print_about();
-			mode = print_main();
+			print_main();
+			mode = get_input();
 		elif(mode == "1" or mode == "2"):
 			os.system('clear');
 			board = Board();
@@ -56,7 +58,8 @@ def main():
 					mode = "1"
 				else:
 					os.system('clear');
-					mode = print_main();
+					print_main();
+					mode = get_input();
 
 			elif (mode == "2"):
 				p1_turn = True
@@ -86,10 +89,12 @@ def main():
 				if(p_again == 'y'):
 					mode = "2"
 				else:
-					mode = print_main();
+					print_main();
+					mode = get_input()
 
 ########## Generates the Main Menu Screen and returns a valid choice ##########
 def print_main():
+	"""Prints the main menu"""
 	print("Welcome to the Game Nim!\n");
 	print("Main Menu");
 	print("------------------------");
@@ -98,12 +103,14 @@ def print_main():
 	print("2.) Multiplayer");
 	print("q.) Quit\n")
 
+########### Asks user to input 
+def get_input():
 	possible_inputs = ['a','1','2','q'];
-
 	mode = input("Enter Selection: ");
 
 	while(mode not in possible_inputs):
 		mode = input("invalid choice. Try again: ")
+
 	return mode
 
 ########## Prints the About Page then the Main Menu again ##########
@@ -111,7 +118,7 @@ def print_about():
 	os.system('clear');
 	print("-------------------------------------------------");
 	print("About")
-	print("\nNim is a two player game. In this case, that means you and the computer. \n When you start the game, a random number of piles consisting of a random number of stones is put together. \nBoth players take turns. Each turn a player must remove one or more stones from a pile. \nThe player that takes the last stone(s) from the only remaining pile wins. Easy, eh?")
+	print("\nNim is a two player game. In this case, that means you and the computer. \nWhen you start the game, a random number of piles consisting of a random number of stones is put together. \nBoth players take turns. Each turn a player must remove one or more stones from a pile. \nThe player that takes the last stone(s) from the only remaining pile wins. Easy, eh?")
 	print("-------------------------------------------------\n\n");
 
 main()

@@ -1,5 +1,11 @@
 import random
 
+"""
+Board Class is used to save the state of the current game
+When the board is instantiated, it randomly generates a random # of rows and # of sticks
+The board itself uses a dictionary to store its values using a key -> 'row_#'' format with value # of sticks
+left in the row.
+"""
 class Board():
 	board = {}
 	num_rows = 0
